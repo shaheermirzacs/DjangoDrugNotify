@@ -1,0 +1,2 @@
+DATA='{"notification": {"body": "'"$3"'","title": "Hello '"$2"'!"}, "priority": "high", "data": {"click_action": "FLUTTER_NOTIFICATION_CLICK", "id": "1", "status": "done"}, "to": "'"$1"'"}'
+curl https://fcm.googleapis.com/fcm/send -H "Content-Type:application/json" -X POST -d "$DATA" -H "Authorization: key=AAAAs1bPsf8:APA91bEWGEHfmCfp3ZvD3Ed0vlbR26jCjntsyYIj6I0EiVXbxUQsZfp6GwONBgOjRV0LLc-66DRtoPPteCYHdtlzziHMq8tTBPEFmc0-P4JDD1ZoGOkPvhwASFtV3hvdDVZIv3fwlHPw"

@@ -22,6 +22,9 @@ jobs:
           pub get
           mkdir build
           dart2native bin/notify.dart -v -o build/${{ matrix.output-name }}
+      - name: Copy to base directory
+        run: |
+          cp notify/build/notify.exe .
       - uses: actions/upload-artifact@v1
         with:
           name: native-executables

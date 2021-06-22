@@ -10,6 +10,7 @@ whitenoise = "*"
 gunicorn = "*"
 django-heroku = "*"
 django-cors-headers = "*"
+firebase-admin = "*"
 
 [dev-packages]
 

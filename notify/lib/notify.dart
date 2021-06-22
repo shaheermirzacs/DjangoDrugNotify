@@ -39,8 +39,8 @@ void postTest(User user, bool testing, String msg) async {
   final today = DateTime.now();
   final formatter = DateFormat('yyyy-MM-dd');
   final formatted = formatter.format(today);
-  var url = 'https://drugnotify.herokuapp.com/tests/';
-  // var url = 'http://127.0.0.1:8000/tests/';
+  // var url = 'https://drugnotify.herokuapp.com/tests/';
+  var url = 'http://127.0.0.1:8000/tests/';
 
   var body = convert.jsonEncode({
     'user': user.identifier,
@@ -56,8 +56,8 @@ void postTest(User user, bool testing, String msg) async {
 }
 
 Future<dynamic> getRequest() async {
-  var url = 'https://drugnotify.herokuapp.com/users/';
-  // var url = 'http://127.0.0.1:8000/users';
+  // var url = 'https://drugnotify.herokuapp.com/users/';
+  var url = 'http://127.0.0.1:8000/users';
 
   final response = await http.get(url);
   return convert.jsonDecode(response.body);

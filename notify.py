@@ -41,11 +41,6 @@ def saveTestToDB(user, testing, message):
 
 
 def notifyUser(user, message):
-    cred = credentials.Certificate(
-        "drugtestnotify-firebase-adminsdk-trdly-a05ce5b447.json"
-    )
-    firebase_admin.initialize_app(cred)
-
     message = messaging.Message(
         notification=messaging.Notification(
             title=f"Hello {user.first_name}", body=message
@@ -85,6 +80,11 @@ def checkForTest(user):
 
 
 def main():
+    cred = credentials.Certificate(
+        "drugtestnotify-firebase-adminsdk-trdly-a05ce5b447.json"
+    )
+    firebase_admin.initialize_app(cred)
+
     if len(sys.argv) > 2:
         user = User(
             phone=sys.argv[1],
